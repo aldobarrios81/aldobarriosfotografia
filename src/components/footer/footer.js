@@ -14,7 +14,7 @@ class Footer extends Component {
             target="blank"
           >
             <GitHub
-              color="secondary"
+              color="primary"
               fontSize="large"
               className="social-icons"
             />
