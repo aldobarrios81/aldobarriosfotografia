@@ -1,17 +1,21 @@
 import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemCount from './components/ItemCount/ItemCount'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import Footer from "./components/footer/footer";
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// import ItemCount from './components/ItemCount/ItemCount'
 function App() {
   return (
    <div className='App'>
-     <NavBar />
-     <ItemCount />
-     <ItemListContainer/>
+      <BrowserRouter>
+     <NavBar /> 
+        <Routes>
+          <Route path="/"  element={<ItemListContainer/>} />
+        </Routes>
      <Footer />
+     </BrowserRouter>
+    
    </div>
   );
 }
